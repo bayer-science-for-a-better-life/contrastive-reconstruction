@@ -2,6 +2,8 @@
 
 *Tensorflow-keras implementation for Contrastive Reconstruction: a self-supervised learning algorithm that obtains image representations by jointly optimizing a contrastive and a self-reconstruction loss.*
 
+![ConRec_model](https://user-images.githubusercontent.com/8821623/114728681-97c98900-9d3f-11eb-8c83-213b2765a227.png)
+
 ## Install Dependencies
 
 We used Python 3.7 in our experiments.
@@ -286,5 +288,17 @@ where models.json has the same structure as for the logisitic regression
 and contained paths to random initialized models in this case.
 
 
+## Cite
 
+[ConRec arxiv paper](https://arxiv.org/pdf/2104.04323)
 
+```
+@article{dippel2021finegrained,
+      title={Towards Fine-grained Visual Representations by Combining Contrastive Learning with Image Reconstruction and Attention-weighted Pooling}, 
+      author={Jonas Dippel and Steffen Vogler and Johannes H\"ohne},
+      year={2021},
+      eprint={2104.04323},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
