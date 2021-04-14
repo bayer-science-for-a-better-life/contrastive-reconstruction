@@ -297,8 +297,6 @@ and contained paths to random initialized models in this case.
       title={Towards Fine-grained Visual Representations by Combining Contrastive Learning with Image Reconstruction and Attention-weighted Pooling}, 
       author={Jonas Dippel and Steffen Vogler and Johannes H\"ohne},
       year={2021},
-      eprint={2104.04323},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      journal={arXiv preprint arXiv:2104.04323}
 }
 ```
