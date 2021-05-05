@@ -71,7 +71,8 @@ if __name__ == '__main__':
                         help='How many threads should be used when loading the dataset')
     parser.add_argument('--linear-type', default='categorical')
     parser.add_argument('--save-epochs', type=int, nargs='*', default=[], help='Specifies ')
-    parser.add_argument('--no-cache', action='store_true', help='Prevents the dataset from being cached')
+    parser.add_argument('--cache', action='store_true', help='Caches the dataset, Improves performance for small datasets. '
+                                                             'Should not be used with large image folders')
     parser.add_argument('--simclr', action='store_true')
 
     parser.add_argument('--shuffle-buffer-multiplier', type=int, default=10,
@@ -105,7 +106,7 @@ if __name__ == '__main__':
     train, test, num_examples = load_dataset(args.dataset, args.data_path,
                                              test_split=args.test_split if not args.no_test_data else None,
                                              train_split=args.train_split,
-                                             cache=not args.no_cache,
+                                             cache=args.cache,
                                              threads=args.threads, docker_down=args.docker_download)
 
     conrec_train, conrec_test = (transform.conrec_dataset(ds, args.batch_size, height=args.height,
@@ -140,7 +141,7 @@ if __name__ == '__main__':
             train_eval, test_eval, _ = load_dataset(args.eval_dataset, args.eval_data_path,
                                                     test_split=args.eval_test_split,
                                                     train_split=args.eval_train_split,
-                                                    cache=True,
+                                                    cache=args.cache,
                                                     threads=args.threads)
 
         # Resize with center crop if desired
