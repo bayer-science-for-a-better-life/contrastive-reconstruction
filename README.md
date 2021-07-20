@@ -1,6 +1,7 @@
 # Contrastive Reconstruction (ConRec)
 
-*Tensorflow-keras implementation for Contrastive Reconstruction: a self-supervised learning algorithm that obtains image representations by jointly optimizing a contrastive and a self-reconstruction loss.*
+Tensorflow-keras implementation for *Contrastive Reconstruction: a self-supervised learning algorithm that obtains image representations by jointly optimizing a contrastive and a self-reconstruction loss* 
+presented at the [ICML 2021 Workshop: Self-Supervised Learning for Reasoning and Perception](https://icml21ssl.github.io/) [[Paper](https://arxiv.org/pdf/2104.04323), [Poster](https://github.com/bayer-science-for-a-better-life/contrastive-reconstruction/files/6850505/poster.pdf)].
 
 ![ConRec_model](https://user-images.githubusercontent.com/8821623/114728681-97c98900-9d3f-11eb-8c83-213b2765a227.png)
 
