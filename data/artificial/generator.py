@@ -1,7 +1,6 @@
 from tqdm import tqdm
 import numpy as np
 from sklearn.utils import shuffle
-from analysis.utils import plot_image_grid
 
 
 class ArtificialDatasetGenerator:
@@ -28,8 +27,3 @@ class ArtificialDatasetGenerator:
         xtest, ytest = self.generate_samples(num_test // self.num_classes)
         np.savez_compressed(filename, x_train=xtrain, x_test=xtest, y_train=ytrain, y_test=ytest)
 
-    def show_samples(self, cls, count=4):
-        xs = []
-        for i in range(count):
-            xs.append(self.generate_sample(cls))
-        plot_image_grid(xs)
